@@ -1,0 +1,40 @@
+@import "../../../variables";
+
+/* $primary: #D4AF37; */
+$color: #fff;
+
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.item {
+    background: $primary;
+    color: $color;
+    border-radius: 1rem;
+    &:hover{
+        background-color: $primary-hover;
+        cursor: pointer;
+    }
+}
+
+.item a{
+    color: $color;
+    width: 400px;
+    min-height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+@media (width < 575px) {
+    .item a{
+        width: 200px;
+        height: 80px;
+        min-height: unset;
+        font-size: 1.2rem;
+    }
+}

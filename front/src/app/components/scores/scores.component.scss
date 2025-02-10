@@ -1,0 +1,244 @@
+@import "../../../variables";
+
+$color: #fff;
+$tableBackground: #213f59;
+
+table{
+    border-collapse: separate;
+    border-spacing: 8px
+}
+
+table td {
+    border: 2px solid transparent;
+    outline: 2px solid $primary;
+    box-shadow: inset 0 0 0 2px $primary, 0 0 8px #000;
+    color: $color;
+    background-color: $tableBackground;
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+    font-size: 1.4rem;
+}
+
+@media (1000px < width < 1200px){
+    table td {
+        width: 70px;
+        height: 70px;
+    }
+
+    table td.name {
+        width: 100px;
+    }
+
+    table thead td img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (800px < width < 1000px){
+    table td {
+        width: 50px;
+        height: 50px;
+    }
+
+    table td.name {
+        width: 80px !important;
+    }
+
+    table thead td img{
+        width: 40px;
+        height: 40px;
+    }
+
+    td.totalPoints .cell-content img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+td .cell-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+thead td:first-child {
+    all: unset;
+}
+
+td.military .cell-content {
+    border-bottom: 3px solid #D32F2F;
+}
+
+td.coins .cell-content {
+    border-bottom: 3px solid  #FFD700;
+}
+
+td.wonderStages .cell-content {
+    border-bottom: 3px solid #FFC107;
+}
+
+td.civicStructures .cell-content {
+    border-bottom: 3px solid #2196F3;
+}
+
+td.commercialStructures .cell-content {
+    border-bottom: 3px solid #FFEB3B;
+}
+
+td.guilds .cell-content {
+    border-bottom: 3px solid #9C27B0;
+}
+
+td.scientificStructures .cell-content {
+    border-bottom: 3px solid #4CAF50;
+}
+
+td.totalPoints .cell-content {
+    position: relative;
+}
+
+td.totalPoints .cell-content span {
+    text-align: center;
+}
+
+td.totalPoints .cell-content img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td.name {
+    width: 200px !important;
+}
+
+td.name .cell-content {
+    flex-direction: column;
+}
+
+td.name .cell-content .playerName {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerName span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+td.name .cell-content .wonder {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+td.name .cell-content .wonderName {
+    font-size: 1.2rem;
+}
+
+.wonder i{
+    font-family: 'bootstrap-icons';
+    &.day::before{
+        content: '\F1D1';
+    }
+
+    &.night::before{
+        content: '\F494';
+    }
+}
+
+td input {
+    all: unset;
+    width: 30px;
+    text-align: center;
+}
+
+td.military input {
+    border-bottom: 2px solid #D32F2F;
+}
+
+td.coins input {
+    border-bottom: 2px solid  #FFD700;
+}
+
+td.wonderStages input {
+    border-bottom: 2px solid #FFC107;
+}
+
+td.civicStructures input {
+    border-bottom: 2px solid #2196F3;
+}
+
+td.commercialStructures input {
+    border-bottom: 2px solid #FFEB3B;
+}
+
+td.guilds input {
+    border-bottom: 2px solid #9C27B0;
+}
+
+td.scientificStructures input {
+    border-bottom: 2px solid #4CAF50;
+}
+
+/* To hide the spins in number input */
+td input::-webkit-outer-spin-button,
+td input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Complete design for small screens */
+.small-screen {
+    display: none;
+}
+
+@media (width < 800px){
+    .big-screen {
+        display: none;
+    }
+
+    .small-screen {
+        display: block;
+    }
+}
+
+.small-screen thead td img {
+    max-width: 70px;
+}
+
+.category-navigator{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-navigator i{
+    font-size: 2rem;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.category-navigator span{
+    font-size: 1.5rem;
+}
+
+

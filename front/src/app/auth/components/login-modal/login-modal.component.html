@@ -1,0 +1,23 @@
+<div class="modal-body p-4 pb-5">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+            <button class="btn-close btn-close-white" aria-label="Close" (click)="activeModal.close('Login modal closed')"></button>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-10 tabs d-flex justify-content-around">
+            <div class="tab-item" [ngClass]="{'active': active['login']}" (click)="toggleActive('login')">
+                Log In
+            </div>
+            <div class="tab-item" [ngClass]="{'active': active['register']}" (click)="toggleActive('register')">
+                Register
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-10 col-md-8 col-lg-4 d-flex justify-content-center">
+            <app-login *ngIf="active['login']"></app-login>
+            <app-register *ngIf="active['register']"></app-register>
+        </div>
+    </div>
+</div>

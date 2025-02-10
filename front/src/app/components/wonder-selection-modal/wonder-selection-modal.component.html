@@ -1,0 +1,21 @@
+<div class="modal-body">
+    <div class="row p-4">
+        <div class="col-12 mb-3">
+            <label for="wonder" class="form-label">Select wonder:</label>
+            <select name="wonder" id="" class="form-select" [(ngModel)]="player.wonder">
+                <option [ngValue]="wonder" *ngFor="let wonder of wonders">{{wonder.name}}</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <label for="side" class="form-label">Select side:</label>
+            <select name="side" id="" class="form-select" [(ngModel)]="player.side">
+                <option value="day">Day</option>
+                <option value="night">Night</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" (click)="confirm()">Confirm choice</button>
+    <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+</div>

@@ -1,0 +1,146 @@
+@import "../../../variables";
+
+$borderColor: #213f59;
+
+.winner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 800px;
+    height: 500px;
+    border-radius: 1rem;
+    z-index: 1;
+    opacity: 0;
+    animation: appear 2s ease-in-out forwards;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: grayscale(100);
+        z-index: -1;
+        border-radius: 1rem;
+    }
+
+    &.alexandria_day::before {
+        background-image: url('/assets/images/boards/alexandria_day.webp');
+    }
+
+    &.alexandria_night::before {
+        background-image: url('/assets/images/boards/alexandria_night.webp');
+    }
+
+    &.babylon_day::before{
+        background-image: url('/assets/images/boards/babylon_day.webp');
+    }
+
+    &.babylon_night::before {
+        background-image: url('/assets/images/boards/babylon_night.webp');
+    }
+
+    &.gizah_day::before{
+        background-image: url('/assets/images/boards/gizah_day.webp');
+    }
+
+    &.gizah_night::before {
+        background-image: url('/assets/images/boards/gizah_night.webp');
+    }
+
+    &.rhodas_day::before{
+        background-image: url('/assets/images/boards/rhodas_day.webp');
+    }
+
+    &.rhodas_night::before {
+        background-image: url('/assets/images/boards/rhodas_night.webp');
+    }
+
+    &.olympia_day::before{
+        background-image: url('/assets/images/boards/olympia_day.webp');
+    }
+
+    &.olympia_night::before {
+        background-image: url('/assets/images/boards/olympia_night.webp');
+    }
+
+    &.halikarnassos_day::before{
+        background-image: url('/assets/images/boards/halikarnassos_day.webp');
+    }
+
+    &.halikarnassos_night::before {
+        background-image: url('/assets/images/boards/halikarnassos_night.webp');
+    }
+
+    &.efeso_day::before{
+        background-image: url('/assets/images/boards/efeso_day.webp');
+    }
+
+    &.efeso_night::before {
+        background-image: url('/assets/images/boards/efeso_night.webp');
+    }
+}
+
+.winner-wrapper img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -2000px);
+    object-fit: cover;
+    filter: unset;
+    animation: crownAppear 2s ease-in-out forwards;
+}
+
+.winner-wrapper .winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    animation: appear 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+.winner .name {
+    font-size: 2.5rem;
+    font-weight: 600
+}
+
+.winner .points {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.links-wrapper {
+    opacity: 0;
+    animation: appear 1s ease-in-out forwards;
+    animation-delay: 3;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes crownAppear {
+    from {
+        transform: translate(-50%, -2000px);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+

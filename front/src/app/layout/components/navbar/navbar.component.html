@@ -1,0 +1,29 @@
+<header>
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-3 col-sm-3 col-md-3 d-flex align-items-center">
+                <!-- <img class="logo" src="assets/images/logo.png" alt="">
+                <img src="assets/images/logo-sm.png" alt="" class="logo-sm"> -->
+                <picture (click)="home()">
+                    <source class="logo" media="(max-width: 992px)" srcset="assets/images/logo-sm.png">
+                    <img class="logo" src="assets/images/logo.png" alt="">
+                </picture>
+            </div>
+            <div class="col-9 col-sm-9 col-md-9">
+                <nav class="h-100">
+                    <div class="d-flex justify-content-end align-items-center h-100">
+                        <div class="nav-item" *ngIf="!loggedIn">
+                            <i class="bi bi-box-arrow-in-left" alt="Log in" (click)="openLoginModal()"></i>
+                        </div>
+                        <div class="nav-item" *ngIf="loggedIn">
+                            <div class="d-flex justify-content-around">
+                                <i class="bi bi-person-fill"></i>
+                                <i class="bi bi-box-arrow-right" (click)="logout()" alt="Log out"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,31 @@
+<div class="login-form-wrapper">
+    <div class="my-3 alert alert-{{alert.level}} alert-dismissible fade show in" role="alert" *ngIf="alert.message !== ''">
+        {{alert.message}}
+        <button class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="alert.message = ''"></button>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login($event)">
+        <div>
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" name="username" class="form-control" formControlName="username"
+                [ngClass]="{'is-invalid': username?.invalid && (username?.touched || username?.dirty)}">
+            <div class="invalid-feedback" *ngIf="username?.invalid && (username?.touched || username?.dirty)">
+                <div *ngIf="username?.errors?.['required']">
+                    Username is required
+                </div>
+            </div>
+        </div>
+        <div class="mt-2">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" name="password" class="form-control" formControlName="password"
+                [ngClass]="{'is-invalid': password?.invalid && (password?.touched || password?.dirty)}">
+            <div class="invalid-feedback" *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+                <div *ngIf="password?.errors?.['required']">
+                    Password is required
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 w-100 d-flex justify-content-center">
+            <button class="btn btn-primary" [disabled]="loginForm.invalid">Log in</button>
+        </div>
+    </form>
+</div>

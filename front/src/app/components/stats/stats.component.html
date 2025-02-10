@@ -1,0 +1,32 @@
+<div class="row mt-4">
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <highcharts-chart
+            *ngIf="gamesChartOptions"
+            [Highcharts]="Highcharts"
+            [options]="gamesChartOptions"
+        ></highcharts-chart>
+    </div>
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <highcharts-chart
+            *ngIf="averagePointsChartOptions"
+            [Highcharts]="Highcharts"
+            [options]="averagePointsChartOptions"
+        ></highcharts-chart>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <highcharts-chart
+            *ngIf="maxPointsChartOptions"
+            [Highcharts]="Highcharts"
+            [options]="maxPointsChartOptions"
+        ></highcharts-chart>
+    </div>
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <highcharts-chart
+            *ngIf="totalWinsChartOptions"
+            [Highcharts]="Highcharts"
+            [options]="totalWinsChartOptions"
+        ></highcharts-chart>
+    </div>
+</div>

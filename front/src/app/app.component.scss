@@ -1,0 +1,25 @@
+.wrapper {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    background-color: #F5F5DC;
+}
+
+.content {
+    min-height: calc(100vh - 80px - 50px);
+    display: flex;
+    flex-direction: column;
+}
+
+.content > * {
+    flex-grow: 1;
+}
+
+router-outlet {
+    flex-grow: 0 !important;
+}
+
+footer{
+    height: 50px;
+    background-color: #4A2C2A;
+    color: #F0E4D7
+}

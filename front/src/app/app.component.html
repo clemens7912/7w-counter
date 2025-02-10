@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<div class="wrapper d-flex flex-column">
+    <div class="container content flex-grow-1">
+        <router-outlet></router-outlet>
+    </div>
+    <footer class="d-flex justify-content-center align-items-center">
+        <span class="me-4">Copyright &#64; reserved by Aleix Clemens.</span>
+        <a [routerLink]="['/credits']" routerLinkActive="router-link-active">Credits</a>
+    </footer>
+</div>

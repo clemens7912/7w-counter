@@ -1,0 +1,106 @@
+/* h3{
+    border-bottom: 1px solid #ccc;
+} */
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 3px solid #4A2C2A; /* Stone/wooden-like borders */
+    border-radius: 10px;
+    background-color: #fffaf0; /* A lighter background for each section */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Adds a little depth */
+}
+
+#selectable-players i:hover{
+    cursor: pointer;
+}
+
+.board-card{
+    width: 600px;
+    height: 350px;
+    border-radius: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    position: relative;
+    filter: grayscale(100%);
+
+    &.alexandria_day{
+        background-image: url('/assets/images/boards/alexandria_day.webp');
+    }
+
+    &.alexandria_night {
+        background-image: url('/assets/images/boards/alexandria_night.webp');
+    }
+
+    &.babylon_day{
+        background-image: url('/assets/images/boards/babylon_day.webp');
+    }
+
+    &.babylon_night {
+        background-image: url('/assets/images/boards/babylon_night.webp');
+    }
+
+    &.gizah_day{
+        background-image: url('/assets/images/boards/gizah_day.webp');
+    }
+
+    &.gizah_night {
+        background-image: url('/assets/images/boards/gizah_night.webp');
+    }
+
+    &.rhodas_day{
+        background-image: url('/assets/images/boards/rhodas_day.webp');
+    }
+
+    &.rhodas_night {
+        background-image: url('/assets/images/boards/rhodas_night.webp');
+    }
+
+    &.olympia_day{
+        background-image: url('/assets/images/boards/olympia_day.webp');
+    }
+
+    &.olympia_night {
+        background-image: url('/assets/images/boards/olympia_night.webp');
+    }
+
+    &.halikarnassos_day{
+        background-image: url('/assets/images/boards/halikarnassos_day.webp');
+    }
+
+    &.halikarnassos_night {
+        background-image: url('/assets/images/boards/halikarnassos_night.webp');
+    }
+
+    &.efeso_day{
+        background-image: url('/assets/images/boards/efeso_day.webp');
+    }
+
+    &.efeso_night {
+        background-image: url('/assets/images/boards/efeso_night.webp');
+    }
+}
+
+.player-name {
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+}
+
+.remove-selected-player {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+
+    &:hover{
+        cursor: pointer;
+        font-size: 2.2rem;
+    }
+}
+
+
+

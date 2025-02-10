@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Jacques Francois';
+    src: url('assets/fonts/JacquesFrancois-Regular.ttf');
+}
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$modal-lg: 1000px;
+$modal-inner-padding: 0;
+
+/* $input-focus-border-color: #fa8072; 
+$input-focus-box-shadow: 0 0 0 .25rem #fa8072; */
+/* $primary: #fa8072; */
+$primary: #D4AF37;
+
+/*
+$secondary: #556B2F
+$red: #8B4513
+$info: #1C3D5A
+background: #F5F5DC
+*/
+
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary
+));
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
+
+.btn-primary {
+  color: #fff !important;
+}
+
+a{
+  text-decoration: none;
+}
+
+:is(.form-control,.form-select):focus {
+    border-color: #D4AF37;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(212, 175, 55, 1);
+}
+/* :is(.form-control,.form-select):focus {
+    border-color: #fa8072;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(250, 128, 114, 1);
+} */
+
+/*To make everything rendered inside content (layout) has 100% height*/
+.content > * {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* To make modal full screen in phones*/
+@media (max-width: 575px) {
+  .modal-dialog {
+    margin : 0;
+  }
+  .modal-full-mobile {
+    width : 100vw;
+    height :100vh;
+  }
+}
