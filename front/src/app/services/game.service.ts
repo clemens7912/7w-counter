@@ -22,6 +22,10 @@ export class GameService {
     return this.http.post<Player>(BACKEND_URL+'/api/games/player', {name});
   }
 
+  deletePlayer(id: number): Observable<any> {
+    return this.http.delete<any>(BACKEND_URL + `/api/games/player/${id}`);
+  }
+
   getAllPlayers(): Observable<Player[]> {
     return this.http.get<Player[]>(BACKEND_URL+'/api/games/player');
   }

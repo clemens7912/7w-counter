@@ -35,7 +35,7 @@
         <div [ngClass]="{'col-3': !smallScreen, 'col-6': smallScreen}">
             <div class="d-flex justify-content-center align-items-center fs-5" style="gap:10px">
                 <i class="bi bi-person-plus-fill" (click)="openPlayerSelection(i)"></i>
-                <i class="bi bi-trash-fill"></i>
+                <i class="bi bi-trash-fill" (click)="deletePlayer(player.id)"></i>
             </div>
         </div>
     </div>

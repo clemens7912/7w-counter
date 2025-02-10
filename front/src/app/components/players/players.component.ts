@@ -59,6 +59,18 @@ export class PlayersComponent implements OnInit{
     })
   }
 
+  deletePlayer(id: number){
+    this.gameService.deletePlayer(id).subscribe({
+      next: (data) => {
+        //We delete the player from the view
+        this.players = this.players.filter((player) => player.id != id);
+      },
+      error: (err) => {
+        console.log(err.message)
+      }
+    })
+  }
+
   getAllPlayers(){
     this.gameService.getAllPlayers().subscribe({
       next: (players) => {

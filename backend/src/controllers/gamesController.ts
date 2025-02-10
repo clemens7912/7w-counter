@@ -31,6 +31,37 @@ export const createPlayer = async (req: Request, res: Response) => {
     }
 }
 
+export const deletePlayer = async (req: Request, res: Response) => {
+    const id = req.params.id; 
+    try{
+        const player = await Player.findByPk(id);
+
+        if(!player){
+            return res.status(404).json({
+                'message': 'Player not found'
+            });
+        }
+
+        await player.destroy();
+
+        res.json({
+            'message': `Player ${id} deleted correctly`
+        });
+    }catch(error: unknown){
+        if(error instanceof Error){
+            console.log(error.stack);
+            res.status(500).json({
+                'message': error.message
+            });
+        }else{
+            console.log(error);
+            res.status(500).json({
+                'message':'Error creating player'
+            });
+        }
+    }
+}
+
 export const getAllPlayers = async (req: Request, res: Response) => {
     try{
         const players = await Player.findAll({
